@@ -49,22 +49,6 @@ func GetFixPrice(c *gin.Context) {
 	c.JSON(200, sku)
 }
 
-// func GetByID(c *gin.Context) {
-// 	id := c.Param("sk_uid")
-// 	var sku models.Sku
-// 	result := initializers.DB.Where("sk_uid = ?", id).Find(&sku)
-// 	if result.Error != nil {
-// 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
-// 			c.JSON(404, gin.H{"error": id})
-// 			return
-// 		} else {
-// 			c.JSON(500, gin.H{"error": result.Error.Error()})
-// 			return
-// 		}
-// 	}
-// 	c.JSON(200, sku)
-// }
-
 func UpdateSku(c *gin.Context) {
 	var sku models.Sku
 	id := c.Param("sk_uid")

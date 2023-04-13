@@ -14,11 +14,10 @@ func init() { // if this work correctly this would run env file and work on port
 }
 func main() {
 	r := gin.Default()
+
 	// Sku
 	r.GET("/", controllers.PostsCreate)
 	r.GET("/Sku", controllers.GetAllProductAPI)
-	//r.GET("/Sku/:sk_uid", controllers.GetByID)
-	r.GET("/SkuGetFixPrice", controllers.GetFixPrice)
 	r.GET("/Sku/:field_name/:field_value", controllers.GetByFeild)
 	r.PUT("/Sku/:sk_uid", controllers.UpdateSku)
 
