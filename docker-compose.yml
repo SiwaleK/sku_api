@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15.2-alpine
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=sku_5435
