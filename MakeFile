@@ -1,2 +1,6 @@
 migrate: 
 	go run migrate/migrate.go
+main:
+	go run main.go
+mockgen: 
+	 mockgen --destination=./mock/mocks.go goelster/models SkuMock    
